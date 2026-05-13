@@ -1,0 +1,1572 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --warna-utama: #b6619f;
+
+  --warna-utama-gelap: #AD7CA4;
+
+  --warna-sekunder: #A98BC7;
+
+  --warna-aksen: #6E6497;
+
+  --warna-latar: #ede6ff;
+
+  --warna-putih: #ffffff;
+  --warna-teks: #000000;
+
+  --warna-teks-abu: #6E6497;
+  --warna-garis: #b6619f;
+  --warna-bulet: #F48FB1;
+  --warna-cinta: #ffe6f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} *
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-tag {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--warna-aksen);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--warna-utama);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--warna-teks-abu);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto 50px;
+}
+
+.highlight {
+  color: var(--warna-utama);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-wa {
+  background-color: #F48FB1;
+  color: var(--warna-putih);
+}
+
+.btn-wa:hover {
+  background-color: #F48FB1;
+}
+
+.btn-large {
+  padding: 18px 44px;
+  font-size: 1.1rem;
+}
+
+.btn-outline {
+  border: 2px solid var(--warna-bulet);
+  color: var(--warna-bulet);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--warna-putih);
+  color: var(--warna-sekunder);
+}
+
+.btn-outline-dark {
+  display: inline-block;
+  border: 2px solid var(--warna-utama);
+  color: var(--warna-utama);
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+}
+
+.navbar {
+  background-color: #ffffff;
+
+  padding: 12px 0;
+
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+
+  z-index: 9999;
+
+  margin: 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.navbar nav a {
+  color: #5c4b87;
+  padding: 8px 14px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar nav a:hover {
+  color: var(--warna-aksen);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-wa {
+  padding: 10px 14px;
+  font-size: 0.8rem;
+}
+
+.running-bar{
+    width: 100%;
+    overflow: hidden;
+    background: #f3e8ff;
+    padding: 8px 0;
+}
+
+.running-track{
+    display: flex;
+    width: max-content;
+
+    animation: jalanTerus 18s linear infinite;
+}
+
+.running-content{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding-right: 40px;
+}
+
+.running-logo{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.running-content span{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #5c4b87;
+
+    white-space: nowrap;
+}
+
+@keyframes jalanTerus{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+
+}
+
+.hero {
+
+  background: linear-gradient(135deg, #ffe6f0 0%, #ede6ff 100%);
+  padding: 70px 0 40px;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  color: var(--warna-sekunder);
+
+  padding-top: 0x;
+}
+
+.hero-tag {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--warna-aksen);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+
+  margin-top: -20px;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero .subtitle {
+  font-size: 1.08rem;
+  color: rgba(75, 31, 88, 0.86);
+  margin-bottom: 30px;
+}
+
+.hero-banner {
+
+  width: 100%;
+  max-width: 430px;
+
+  border-radius: 50%;
+
+  object-fit: contain;
+
+  background-color: #f1ecff;
+
+  padding: 20px;
+
+  box-shadow: 0 20px 60px rgba(172, 118, 217, 0.45);
+
+  flex-shrink: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.about {
+  padding: 100px 0;
+  background-color: var(--warna-putih);
+  overflow: hidden;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-images {
+  position: relative;
+
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.img-main {
+  width: 90%;
+  height: 400px;
+  object-fit: contain;
+  background-color: #ede6ff;
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(108, 26, 129, 0.552);
+  position: relative;
+  z-index: 1;
+}
+
+.img-small {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 10px solid var(--warna-putih);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.experience-badge {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  background-color: rgba(235, 159, 226, 0.517);
+  color: var(--warna-putih);
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(149, 86, 143, 0.499);
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.experience-badge strong {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.experience-badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--warna-sekunder);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: var(--warna-teks-abu);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.about-checks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+  color: var(--warna-teks);
+}
+
+.about-checks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--warna-garis);
+  font-size: 1.05rem;
+}
+
+.about-checks svg {
+  flex-shrink: 0;
+  background-color: rgba(234, 109, 213, 0.1);
+
+  padding: 6px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+.perawatan{
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #ecd9ff,
+        #ffe6f0 
+    );
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    margin-bottom: 0;
+}
+
+.products .section-title{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: var(--warna-putih);
+
+  margin-bottom: 70px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    justify-content:center;
+
+    gap:32px;
+}
+
+.product-card{
+    background: rgba(255,255,255,0.9);
+
+    border: 15px solid rgba(255,255,255,0.5);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.product-card{
+    background-color: white;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(72, 39, 79, 0.32);
+
+    transition: all 0.3s ease;
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+
+  background-color: #ffe6f0 ;
+  padding: 16px;
+  transition: transform 0.4s;
+  cursor: zoom-in;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+
+  cursor: zoom-in;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.product-badge.new {
+  background-color: #A98BC7;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--warna-aksen);
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 0.9rem;
+  color: var(--warna-teks-abu);
+  margin-bottom: 16px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--warna-utama);
+}
+
+.btn-order {
+  background-color: #F48FB1;
+  color: var(--warna-putih);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-order:hover {
+  background-color: #F48FB1;
+  transform: scale(1.05);
+}
+
+.gallery{
+    margin-top: -1px;
+}
+
+.gallery{
+    background-color: #ffe6f0;
+    padding: 120px 0;
+}
+
+.gallery-grid{
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track{
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.gallery-img{
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  background-color: #f8f4ff;
+  flex-shrink: 0;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(98, 41, 86, 0.39);
+}
+
+.testimonials {
+  padding: 90px 0;
+  background-color: var(--warna-latar);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonial-card {
+  background-color: var(--warna-putih);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(52, 11, 66, 0.318);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-card blockquote {
+  font-size: 0.93rem;
+  color: var(--warna-teks-abu);
+  font-style: italic;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--warna-garis);
+}
+
+.reviewer-title {
+  font-size: 0.82rem;
+  color: var(--warna-teks-abu);
+}
+
+.how-to-order {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #fff8f0 0%, var(--warna-putih) 100%);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.step-card {
+  background-color: var(--warna-putih);
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(76, 26, 75, 0.305);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--warna-garis);
+  line-height: 1;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warna-sekunder);
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 0.92rem;
+  color: var(--warna-teks-abu);
+}
+
+.order-cta {
+  text-align: center;
+}
+
+.contact {
+  padding: 90px 0;
+  background-color: var(--warna-garis);
+
+}
+
+.contact .section-tag {
+  color: var(--warna-putih);
+}
+
+.contact .section-title {
+  color: var(--warna-putih);
+}
+
+.contact .section-subtitle {
+  color: rgba(255, 255, 255, 0.654);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--warna-putih);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-item a,
+.contact-item span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-item a:hover {
+  color: var(--warna-aksen);
+}
+
+.contact-map {
+  background: rgba(255, 255, 255, 0.227);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 240px;
+  justify-content: center;
+}
+
+.map-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warna-putih);
+}
+
+.map-hint {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.695);
+  line-height: 1.7;
+}
+
+.contact .btn-outline-dark {
+  border-color: var(--warna-aksen);
+  color: var(--warna-aksen);
+  align-self: flex-start;
+}
+
+.contact .btn-outline-dark:hover {
+  background-color: var(--warna-aksen);
+  color: var(--warna-sekunder);
+}
+
+.footer {
+  background-color: #0f0f1e;
+
+  padding: 40px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 186, 244, 0.355);
+}
+
+.footer-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--warna-sekunder);
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--warna-aksen);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+}
+
+
+
+
+/* ================================================================
+   MOBILE MENU (CSS ONLY)
+================================================================ */
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--warna-aksen);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ================================================================
+   MODAL GAMBAR (LIGHTBOX)
+================================================================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+  object-fit: contain;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--warna-putih);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--warna-aksen);
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 70px;
+    right: -300px;
+    width: 220px;
+    background-color: var(--warna-sekunder);
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 16px 0 0 16px;
+    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.4);
+    transition: right 0.3s ease-in-out;
+    gap: 16px;
+    display: flex;
+    z-index: 999;
+  }
+
+  .navbar nav a {
+    font-size: 1.05rem;
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* CSS Checkbox Hack */
+  .menu-checkbox:checked ~ nav {
+    right: 0;
+  }
+
+  .menu-checkbox:checked + .hamburger span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 24px;
+}
+
+.hero-banner {
+    max-width: 220px;
+    margin: 0;
+}
+
+  .hero .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2,1fr);
+    gap:16px;
+}
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-text{
+    text-align:center;
+}
+
+.hero-tag{
+    text-align:center;
+}
+
+.hero h1{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hero .subtitle{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+}
+
+@media (max-width: 600px) {
+  
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-banner {
+    max-width: 140px;
+  }
+
+ .product-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+.testimonial-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+.steps-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-images {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .img-main {
+    height: 300px;
+    width: 95%;
+  }
+
+  .img-small {
+    width: 55%;
+    height: 180px;
+    border-width: 6px;
+  }
+
+  .experience-badge {
+    left: -5px;
+    top: 20px;
+    padding: 12px 16px;
+  }
+
+  .experience-badge strong {
+    font-size: 1.6rem;
+  }
+
+  .experience-badge span {
+    font-size: 0.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .navbar{
+    padding:8px 0;
+  }
+
+  .logo-img{
+    height:52px;
+}
+}
+
+html{
+    font-size:16px;
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+section{
+    overflow:hidden;
+}
+
+@media (max-width:600px){
+
+  .container{
+      padding:0 14px;
+  }
+
+}
+
+@media (max-width:600px){
+
+  .about,
+  .perawatan,
+  .gallery,
+  .testimonials,
+  .how-to-order,
+  .contact{
+      padding:55px 0;
+  }
+
+}
+
+@media (max-width:900px){
+
+  .navbar-wa{
+      display:none;
+  }
+
+}
+
+@media (max-width:600px){
+
+  body{
+      font-size:14px;
+  }
+
+  .container{
+      width:100%;
+      padding:0 12px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px; 
+  }
+
+  .hero-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .hero h1{
+      font-size:1.7rem;
+      line-height:1.2;
+      word-break:break-word;
+  }
+
+  .hero .subtitle{
+      font-size:0.75rem;
+      line-height:1.5;
+  }
+
+  .section-title{
+      font-size:2rem;
+      line-height:1.2;
+  }
+
+  .product-grid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+  }
+
+  .product-img{
+      height:120px;
+  }
+
+  .product-info{
+      padding:10px;
+  }
+
+  .product-info h3{
+      font-size:0.75rem;
+      line-height:1.3;
+      word-break:break-word;
+  }
+
+  .product-info p{
+      font-size:0.65rem;
+  }
+
+  .price{
+      font-size:0.75rem;
+  }
+
+  .btn-order{
+      padding:5px 10px;
+      font-size:0.65rem;
+  }
+
+  .testimonial-grid{
+      grid-template-columns:1fr;
+  }
+
+  .steps-grid{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+  }
+
+  .step-card{
+      padding:10px 6px;
+  }
+
+ .step-card h3{
+    font-size:0.6rem;
+    line-height:1.2;
+}
+
+  .step-card p{
+    font-size:0.52rem;
+    line-height:1.3;
+}
+
+}
+
+/* --- PERBAIKAN TOTAL HERO MOBILE: JUDUL TENGAH, ISI SEJAJAR --- */
+
+@media (max-width: 600px) {
+  /* 1. Bapaknya dibikin membungkus (wrap) */
+  .hero-content {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 15px !important;
+  }
+
+  /* 2. Pisahin Judul ke Atas & Tengah (Makan 100% lebar) */
+  .hero-tag, 
+  .hero h1 {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    text-align: center !important; /* Wajib tengah */
+    order: 1;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 3. Bikin Wadah Baru buat Paragraf & Logo biar bisa Sejajar */
+  /* Kita manipulasi .hero-text supaya nggak ngebungkus tombol */
+  .hero-text {
+    flex: 0 0 60% !important; /* Paragraf makan 60% */
+    order: 2;
+    text-align: left !important;
+    display: block !important;
+  }
+
+  .hero .subtitle {
+    font-size: 0.75rem !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 4. Logo di Samping Paragraf (Makan 35%) */
+  .hero-banner {
+    flex: 0 0 35% !important;
+    order: 3;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-banner img {
+    max-width: 80px !important; /* Ukuran logo disesuain */
+  }
+
+  /* 5. Tombol di Paling Bawah, Dikecilin, & Sejajar */
+  .hero-buttons {
+    flex: 0 0 100% !important;
+    order: 4;
+    display: flex !important;
+    flex-direction: row !important; /* Biar sejajar kanan-kiri */
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 15px !important;
+  }
+
+  .hero-buttons .btn {
+    padding: 8px 12px !important; /* Tombol dikecilin */
+    font-size: 0.7rem !important;
+    min-width: fit-content !important;
+    width: auto !important; /* Gak usah lebar-lebar */
+  }
+}
+
+/* --- PERBAIKAN SECTION PERAWATAN (MOBILE 2 KOLOM) --- */
+
+@media (max-width: 600px) {
+  /* 1. Bikin grid jadi 2 kolom sejajar */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important; /* Jarak antar kotak diperkecil biar muat */
+    padding: 0 5px !important;
+  }
+
+  /* 2. Sesuaikan ukuran kotak produk */
+  .product-card {
+    border: none !important; /* Hapus border tebal biar hemat ruang */
+    border-radius: 15px !important;
+  }
+
+  /* 3. Atur foto supaya pas (nggak kekecilan/kegedean) */
+  .product-img {
+    height: 150px !important; /* Tinggi foto yg ideal buat 2 kolom */
+    padding: 10px !important;
+    object-fit: contain !important;
+  }
+
+  /* 4. Beresin teks supaya nggak "ngezoom" dan tetap rapi */
+  .product-info {
+    padding: 12px 10px !important;
+    text-align: center !important; /* Rata tengah biar manis */
+  }
+
+  .product-info h3 {
+    font-size: 0.9rem !important; /* Ukuran judul pas */
+    margin-bottom: 5px !important;
+    line-height: 1.2 !important;
+    min-height: 35px; /* Biar tinggi kotak judul seragam */
+  }
+
+  .product-info p {
+    font-size: 0.75rem !important; /* Deskripsi kecil tapi kebaca */
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* 5. Atur Harga & Tombol biar nggak tumpang tindih */
+  .product-footer {
+    flex-direction: column !important; /* Susun atas-bawah biar nggak sempit */
+    gap: 8px !important;
+    align-items: center !important;
+  }
+
+  .price {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+  }
+
+  .btn-order {
+    width: 100% !important; /* Tombol selebar kotak biar gampang diklik */
+    padding: 8px 5px !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
+  }
+}
+
+/* --- PERBAIKAN SECTION TESTIMONI (MOBILE 3 KOLOM) --- */
+
+@media (max-width: 600px) {
+  /* 1. Paksa grid jadi 3 kolom */
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important; /* Jarak antar kotak diperkecil */
+    padding: 0 !important;
+  }
+
+  /* 2. Sesuaikan padding kartu testimoni */
+  .testimonial-card {
+    padding: 12px 8px !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+  }
+
+  /* 3. Atur bintang & kutipan teks */
+  .stars {
+    font-size: 0.6rem !important; /* Bintang dikecilin */
+    letter-spacing: 1px !important;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 0.55rem !important; /* Teks ulasan dikecilin biar muat */
+    line-height: 1.3 !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Atur info pemberi ulasan (Foto & Nama) */
+  .reviewer-info {
+    flex-direction: column !important; /* Foto & Nama disusun atas-bawah */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+  }
+
+  .avatar {
+    width: 30px !important; /* Ukuran bulat inisial dikecilin */
+    height: 30px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .reviewer-name {
+    font-size: 0.55rem !important;
+    line-height: 1 !important;
+  }
+
+  .reviewer-title {
+    font-size: 0.45rem !important; /* Detail tahun pelanggan dikecilin */
+    display: block !important;
+  }
+}
+
+/* --- PERBAIKAN SECTION TENTANG (MOBILE: FOTO KIRI, TEKS KANAN) --- */
+
+@media (max-width: 600px) {
+  /* 1. Atur Layout Utama: Teks di Kiri, Foto Mungil di Kanan */
+  .about-content {
+    display: flex !important;
+    flex-direction: row !important; /* Biar sejajar */
+    align-items: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* 2. AREA TEKS (DOMINAN): Makan jatah 70% */
+  .about-text {
+    flex: 0 0 70% !important;
+    text-align: left !important;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem !important;
+    text-align: left !important;
+    margin: 5px 0 !important;
+  }
+
+  /* 3. FOTO (MUNGIL): Makan jatah 20% (Segede logo) */
+  .about-img {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+    margin: 0 !important;
+  }
+
+  .about-img img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* 4. PARAGRAF: Turun ke bawah foto & teks judul, lebar penuh */
+  .about-text p {
+    flex: 0 0 100% !important;
+    width: 135% !important; /* Trik biar balik lebar setelah judul kepotong foto */
+    transform: translateX(-35%); /* Geser balik ke kiri */
+    font-size: 0.8rem !important;
+    margin-top: 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 5. BAGIAN CEKLIS (BENEFIT): Dikecilin & Sejajar */
+  .about-benefits {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Bagi 2 kolom biar gak menuhin layar */
+    gap: 8px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+  }
+
+  .benefit-item {
+    font-size: 0.7rem !important; /* Teks ceklis mungil */
+    gap: 5px !important;
+    margin: 0 !important;
+  }
+
+  .benefit-item i {
+    font-size: 0.8rem !important; /* Icon ceklis kecil aja */
+  }
+}
